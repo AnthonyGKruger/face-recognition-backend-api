@@ -11,10 +11,8 @@ import { handleImage, handleImageApi } from "./controllers/image.js";
 const db = knex({
 	client: "pg",
 	connection: {
-		host: "127.0.0.1",
-		user: "anthonykruger",
-		password: "293593",
-		database: "smart-brain",
+		host: process.env.DATABASE_URL,
+		ssl: true,
 	},
 });
 
