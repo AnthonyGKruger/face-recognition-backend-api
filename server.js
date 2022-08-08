@@ -8,6 +8,8 @@ import handleSignIn from "./controllers/signIn.js";
 import handleProfileGet from "./controllers/profile.js";
 import { handleImage, handleImageApi } from "./controllers/image.js";
 
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = 0;
+
 const db = knex({
 	client: "pg",
 	connection: {
